@@ -5,6 +5,7 @@
   <title>ЧМК - Металопрокат</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
   <header class="header">
@@ -22,19 +23,92 @@
       
       <a href="tel:+79999999999" class="phone">+7 999 999 99 99</a>
     </div>
-    <div class="container hero">
-      <div class="hero__desc">
-        <h1 class="hero__desc-title">Тут напишем чем <span>занимается компания</span></h1>
-        <p  class="hero__desc-p">Здесь немного поясняющего текста, который раскрывает заголовок</p>
-        <a href="#" class="hero__desc-btn">Оставить заявку</a>
+      <div class="container hero" id="hero">
+        <div class="hero__desc">
+          <h1 class="hero__desc-title">Тут напишем чем <span>занимается компания</span></h1>
+          <p  class="hero__desc-p">Здесь немного поясняющего текста, который раскрывает заголовок</p>
+          <a href="#" class="hero__desc-btn">Оставить заявку</a>
+        </div>
+        <div class="hero__img">
+           <img src="images/hero-img.jpg" alt="Фото металлопрокатной продукции">
+        </div>
       </div>
-      <div class="hero__img">
-         <img src="images/hero-img.jpg" alt="Фото металлопрокатной продукции">
-      </div>
-    </div>
   </header>
   <main>
-    <section class="products">
+   <section class="slider__catalog">
+    <div class="slider-container">
+    <div class="menu-swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> <p class="swiper-slide__content">Чёрный металлопрокат</p></div>
+        <div class="swiper-slide"> <p class="swiper-slide__content">Нержавеющий металлопрокат</p></div>
+        <div class="swiper-slide"> <p class="swiper-slide__content">Цветной металлопрокат</p></div>
+        <div class="swiper-slide"> <p class="swiper-slide__content">Услуги</p></div>
+      </div>
+    </div>
+    <div class="content-swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide content-slide">
+          <h1>Мы производим:</h1>
+          <div class="content-slide__products">
+            <span>Арматура</span>
+            <span>Катанка</span>
+            <span>Балка (Двутавр)</span>
+            <span>Швеллер</span>
+            <span>Уголок</span>
+            <span>Полоса</span>
+            <span>Круг</span>
+            <span>Квадрат</span>
+            <span>Шестигранник</span>
+          </div>
+        </div>
+        <div class="swiper-slide content-slide">
+          <h1>Нержавеющий прокат:</h1>
+          <div class="content-slide__products">
+            <span>Лист нержавеющий</span>
+            <span>Труба нержавеющая</span>
+            <span>Круг нержавеющий</span>
+            <span>Квадрат нержавеющий</span>
+            <span>Уголок нержавеющий</span>
+            <span>Швеллер нержавеющий</span>
+            <span>Полоса нержавеющая</span>
+            <span>Шестигранник нержавеющий</span>
+            <span>Проволока нержавеющая</span>
+          </div>
+        </div>
+        <div class="swiper-slide content-slide">
+          <h1>Цветной прокат:</h1>
+          <div class="content-slide__products">
+            <span>Алюминиевый лист</span>
+            <span>Медный прокат</span>
+            <span>Латунный прокат</span>
+            <span>Бронзовый прокат</span>
+            <span>Титановый прокат</span>
+            <span>Цинковый прокат</span>
+            <span>Оловянный прокат</span>
+            <span>Никелевый прокат</span>
+            <span>Магниевый прокат</span>
+          </div>
+        </div>
+        <div class="swiper-slide content-slide">
+          <h1>Тут будут услуги:</h1>
+          <div class="content-slide__products">
+            <span>Услуга №1</span>
+            <span>Услуга №2</span>
+            <span>Услуга №3</span>
+            <span>Услуга №4</span>
+            <span>Услуга №5</span>
+            <span>Услуга №6</span>
+            <span>Услуга №7</span>
+            <span>Услуга №8</span>
+            <span>Услуга №9</span>
+          </div>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="products" id="products">
       <div class="container product">
         <div class="product__card">
           <p class="product__card-item">Чёрный металлопрокат</p>
@@ -50,7 +124,7 @@
         </div>
       </div>
     </section>
-    <section class="stats">
+    <section class="stats" id="stats">
     <div class="container stats__container">
       <div class="stats__item">
         <h1 class="stats__item-title">>50</h1>
@@ -92,5 +166,7 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
