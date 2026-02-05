@@ -118,6 +118,41 @@ main, footer, body{
   gap: 20px;
   margin: 0 auto;
 }
+.slider-container__company{
+  height: 584px;
+}
+
+/* Растянуть карту на всю зону content-swiper в секции "О компании" */
+.slider-container__company .content-swiper {
+  padding: 0; /* убираем отступы внутри */
+}
+
+.slider-container__company .content-slide {
+  height: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.slider-container__company .content-slide__products {
+  margin-left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0; /* карта будет доходить до границ */
+  max-width: none;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.slider-container__company #company-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; /* совпадает с border-radius у content-swiper */
+  overflow: hidden;
+}
+.company-address-plaque{
+  background-color: #00aaff;
+}
 
 /* Утилита скрытия секций */
 .hidden {
@@ -164,6 +199,7 @@ main, footer, body{
 }
 .swiper-slide__content{
   max-width: 368px; 
+  font-weight: 700;
 }
 
 .menu-swiper .swiper-slide-thumb-active {
@@ -183,7 +219,7 @@ main, footer, body{
 .content-swiper {
   flex: 1;
   background: #00aaff;
-  border-radius: 20px;
+  border-radius: 60px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -215,6 +251,7 @@ main, footer, body{
   justify-content: left;
   margin-left: 60px;
   max-width: 1078px;
+  position: relative;
 }
 
 .content-slide__products span {
@@ -225,7 +262,22 @@ main, footer, body{
   font-size: 32px;
   font-weight: 700;
 }
-
+.slider__company{
+  font-family: 'Benzin', sans-serif;
+  font-weight: 700;
+}
+.address-box{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #006ED4;
+  color: #fff;
+  font-size: 37px;
+  padding: 26px 58px;
+  border-radius: 60px 60px 0 60px;
+  box-shadow: 0 0 23px -10px rgb(0 0 0);
+}
 .hero{
    margin-top: 60px;
    border: 1px solid #0066ff;
@@ -486,4 +538,10 @@ main, footer, body{
   text-decoration: none;
   color: white;
 
+}
+.ymaps-2-1-79-gotomap,
+.ymaps-2-1-79-gototech,
+.ymaps-2-1-79-gotoymaps__container,
+.ymaps-2-1-79-copyright__layout {
+  display: none !important;
 }
