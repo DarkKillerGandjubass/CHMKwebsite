@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ЧМК - Металопрокат</title>
+  <!-- Подключаем CSS через Flask static -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header_container">
+      <a href="#" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип ЧМК - Металлургический комбинат">
+      </a>
+      <nav class="nav">
+        <ul>
+          <li class="nav__item"><a href="#">каталог</a></li>
+          <li class="nav__item"><a href="#">о компании</a></li>
+          <li class="nav__item"><a href="#form-contact-feedback">оставить заявку</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+79999999999" class="phone">+7 999 999 99 99</a>
+    </div>
+    <div class="container hero" id="hero">
+      <div class="hero__desc">
+        <h1 class="hero__desc-title">Тут напишем чем <span>занимается компания</span></h1>
+        <p class="hero__desc-p">Здесь немного поясняющего текста, который раскрывает заголовок</p>
+        <a href="#form-contact-feedback" class="hero__desc-btn">Оставить заявку</a>
+      </div>
+      <div class="hero__img">
+        <img src="{{ url_for('static', filename='images/hero-img.jpg') }}" alt="Фото металлопрокатной продукции">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Слайдер Каталог -->
+    <section class="slider__catalog">
+      <div class="slider-container">
+        <div class="menu-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><p class="swiper-slide__content">Чёрный металлопрокат</p></div>
+            <div class="swiper-slide"><p class="swiper-slide__content">Нержавеющий металлопрокат</p></div>
+            <div class="swiper-slide"><p class="swiper-slide__content">Цветной металлопрокат</p></div>
+            <div class="swiper-slide"><p class="swiper-slide__content">Услуги</p></div>
+          </div>
+        </div>
+        <div class="content-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide content-slide">
+              <h1>Мы производим:</h1>
+              <div class="content-slide__products">
+                <span>Арматура</span>
+                <span>Катанка</span>
+                <span>Балка (Двутавр)</span>
+                <span>Швеллер</span>
+                <span>Уголок</span>
+                <span>Полоса</span>
+                <span>Круг</span>
+                <span>Квадрат</span>
+                <span>Шестигранник</span>
+              </div>
+            </div>
+            <div class="swiper-slide content-slide">
+              <h1>Нержавеющий прокат:</h1>
+              <div class="content-slide__products">
+                <span>Лист нержавеющий</span>
+                <span>Труба нержавеющая</span>
+                <span>Круг нержавеющий</span>
+                <span>Квадрат нержавеющий</span>
+                <span>Уголок нержавеющий</span>
+                <span>Швеллер нержавеющий</span>
+                <span>Полоса нержавеющая</span>
+                <span>Шестигранник нержавеющий</span>
+                <span>Проволока нержавеющая</span>
+              </div>
+            </div>
+            <div class="swiper-slide content-slide">
+              <h1>Цветной прокат:</h1>
+              <div class="content-slide__products">
+                <span>Алюминиевый лист</span>
+                <span>Медный прокат</span>
+                <span>Латунный прокат</span>
+                <span>Бронзовый прокат</span>
+                <span>Титановый прокат</span>
+                <span>Цинковый прокат</span>
+                <span>Оловянный прокат</span>
+                <span>Никелевый прокат</span>
+                <span>Магниевый прокат</span>
+              </div>
+            </div>
+            <div class="swiper-slide content-slide">
+              <h1>Тут будут услуги:</h1>
+              <div class="content-slide__products">
+                <span>Услуга №1</span>
+                <span>Услуга №2</span>
+                <span>Услуга №3</span>
+                <span>Услуга №4</span>
+                <span>Услуга №5</span>
+                <span>Услуга №6</span>
+                <span>Услуга №7</span>
+                <span>Услуга №8</span>
+                <span>Услуга №9</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Слайдер Компания -->
+    <section class="slider__company hidden">
+      <div class="slider-container slider-container__company">
+        <div class="menu-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><p class="swiper-slide__content">Мы на карте</p></div>
+            <div class="swiper-slide"><p class="swiper-slide__content">Документы</p></div>
+            <div class="swiper-slide"><p class="swiper-slide__content">Контакты</p></div>
+          </div>
+        </div>
+        <div class="content-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide content-slide">
+              <div class="content-slide__products">
+                <div class="address-box">Город Челябинск,<br> улица Северная, 386</div>
+                <div id="company-map"></div>
+              </div>
+            </div>
+            <div class="swiper-slide content-slide">
+              <div class="content-slide__products slide__products-document">
+                <div class="products-document">
+                  <h3 class="document-title">Пример накладной</h3>
+                  <a href="#" class="document-link">cкачать</a>
+                </div>
+                <!-- остальные документы аналогично -->
+              </div>
+            </div>
+            <div class="swiper-slide content-slide">
+              <div class="content-slide__products slide__products-requisite">
+                <p class="products-requisite-title">Реквизиты</p>
+                <div class="products-requisite-desc">
+                  <p class="requsite-item">ИНН: 3314566743</p>
+                  <p class="requsite-item">КПП: 3314566743</p>
+                  <p class="requsite-item">БИК: 3314566743</p>
+                  <p class="requsite-item">ООО «ЧМК»</p>
+                </div>
+                <div class="requisite__contact">
+                  <p class="requisite__contact-adress">Город Челябинск, улица Северная, 386 </p>
+                  <a href="tel:+79999999999" class="requisite__contact-phone">+7 999 999 99 99</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Продукция -->
+    <section class="products" id="products">
+      <div class="container product">
+        <div class="product__card"><p class="product__card-item">Чёрный металлопрокат</p></div>
+        <div class="product__card"><p class="product__card-item">Нержавеющий металлопрокат</p></div>
+        <div class="product__card"><p class="product__card-item">Цветной <br> металлопрокат</p></div>
+        <div class="product__card"><p class="product__card-item">Услуги</p></div>
+      </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="stats" id="stats">
+      <div class="container stats__container">
+        <div class="stats__item">
+          <h1 class="stats__item-title">>50</h1>
+          <p class="stats__item-desc">Сотрудников</p>
+        </div>
+        <div class="stats__item">
+          <h1 class="stats__item-title">>5000</h1>
+          <p class="stats__item-desc">Тонн продукции за 2025 год</p>
+        </div>
+        <div class="stats__item">
+          <h1 class="stats__item-title">>5</h1>
+          <p class="stats__item-desc">Лет на рынке</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Форма для заявки -->
+  <footer class="contact-footer">
+    <div class="container contact-footer__container">
+      <h2 class="contact-footer__title">Свяжитесь с нами</h2>
+      <div class="contact-footer__content">
+        <form class="contact-footer__form" id="form-contact-feedback" action="/submit" method="POST">
+          <p class="form__man">Заполните имя</p>
+          <div class="form-group">
+            <input name="name" id="contact-name" class="group__input" type="text" placeholder="Имя*" required>
+            <input name="surname" id="contact-surname" class="group__input" type="text" placeholder="Фамилия" required>
+          </div>
+          <input name="phone" id="contact-phone" class="group__input-tel" type="tel" placeholder="Номер телефона*" required>
+          <button type="submit">Отправить заявку</button>
+        </form>
+
+        <div class="contact-footer__info">
+          <div class="contact-footer__infoaction">
+            <p class="contact-footer__info-text text__help">Так мы сможем быстрее помочь</p>
+            <p class="contact-footer__info-text text__call">Или сразу позвоните</p>
+          </div>
+          <a href="tel:+79999999999" class="contact-footer__phone">+7 999 999 99 99</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f54b04c3-b69b-40de-8a9f-f089775f4ab2&lang=ru_RU" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
